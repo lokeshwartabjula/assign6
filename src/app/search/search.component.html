@@ -1,0 +1,41 @@
+<div class="container">
+    <h3>Weather Pal :</h3>
+    <br>
+    <div class="row">
+
+        <div class="col-md-5">
+            <input type="text" style="width: 500px" class="form-control" [(ngModel)]='city'>
+           
+        </div>
+        <br>
+        
+        <div class="col-md-3">
+            
+            <button class="btn btn-primary" (click)="search()">&nbsp;&nbsp;&nbsp;&nbsp;Find Weather</button>
+        </div>
+    
+    </div>
+    <p></p>
+
+
+
+    <h3 >City : {{city}}</h3>&nbsp;
+    <table class="table table-striped">
+        <tr>
+            <th class="fas fa-temperature-low">temp</th>
+            <th>pressure</th>
+            <th>humidity</th>
+            <th>temp_min</th>
+            <th>temp_max</th>
+        </tr>
+        <tr>
+            <td>{{tourList.main.temp}}</td>
+            <td>{{tourList.main.pressure}}</td>
+            <td>{{tourList.main.humidity}}</td>
+            <td>{{tourList.main.temp_min}}</td>
+            <td>{{tourList.main.temp_max}}</td>
+
+
+        </tr>
+    </table>
+</div>
